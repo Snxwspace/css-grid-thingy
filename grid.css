@@ -1,6 +1,102 @@
-#grid {
-    /* padding: auto-fit;
-    min-width: ; */
+html {
+    background-color: #d5d4db;
+}
 
+#grid {
+    padding: 5px;
+    margin: auto;
+    
+    width: max(80%, 500px);
+    max-width: min(95%, 1000px);
+    min-width: 50%;
+
+    background-color: white;
     display: grid;
+    
+    grid-template-areas:
+    'logo navbar navbar account'
+    'banner banner banner banner'
+    'text-a text-b text-c text-d'
+    'list text-big text-big box-r'
+    'box-l text-big text-big box-r'
+    'footer footer footer footer'
+    ;
+}
+
+.card {
+    margin: 5px;
+    padding: 10px
+}
+
+.logo {
+    color: #b35a00;
+    grid-area: logo;
+}
+
+.navbar {
+    color: #336601;
+    grid-area: navbar;
+}
+
+.account {
+    color: #b35a00;
+    grid-area: account;
+}
+
+.banner {
+    background-color: #336601;
+    color: white;
+    grid-area: banner;
+}
+
+.text-a {
+    background-color: #b25900;
+    color: white;
+    grid-area: text-a;
+}
+
+.text-b {
+    background-color: #b18500;
+    color: white;
+    grid-area: text-b;
+}
+
+.text-c {
+    background-color: #85b200;
+    color: white;
+    grid-area: text-c;
+}
+
+.text-d {
+    background-color: #b2b300;
+    color: white;
+    grid-area: text-d;
+}
+
+.list {
+    grid-area: list;
+    background-color: #85b200;
+}
+
+.text-big {
+    grid-area: text-big;
+    background-color: #e4e3e8;
+}
+
+.box-r {
+    grid-area: box-r;
+
+    background-color: #e4e3e8;
+}
+
+.box-l {
+    grid-area: box-l;
+
+    background-color: #e4e3e8;
+}
+
+.footer {
+    background-color: #336601;
+    color: white;
+    grid-area: footer;
 }
