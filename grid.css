@@ -10,6 +10,8 @@ html {
     max-width: min(95%, 1000px);
     min-width: 50%;
 
+    min-height: 1000px;
+
     background-color: white;
     display: grid;
     
@@ -19,58 +21,66 @@ html {
     'text-a text-b text-c text-d'
     'list text-big text-big box-r'
     'box-l text-big text-big box-r'
-    'footer footer footer footer'
-    ;
+    'footer footer footer footer';
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 25% 10% 15% 15% 25%;
 }
 
 .card {
     margin: 5px;
-    padding: 10px
 }
 
 .logo {
     color: #b35a00;
     grid-area: logo;
+    padding: 10px;
 }
 
 .navbar {
     color: #336601;
     grid-area: navbar;
+    padding: 10px;
 }
 
 .account {
     color: #b35a00;
     grid-area: account;
+    padding: 10px;
 }
 
 .banner {
     background-color: #336601;
     color: white;
     grid-area: banner;
+    padding: 10px;
 }
 
 .text-a {
     background-color: #b25900;
     color: white;
     grid-area: text-a;
+    padding: 10px;
 }
 
 .text-b {
     background-color: #b18500;
     color: white;
     grid-area: text-b;
+    padding: 10px;
 }
 
 .text-c {
     background-color: #85b200;
     color: white;
     grid-area: text-c;
+    padding: 10px;
 }
 
 .text-d {
     background-color: #b2b300;
     color: white;
     grid-area: text-d;
+    padding: 10px;
 }
 
 .list {
@@ -86,6 +96,12 @@ html {
 .box-r {
     grid-area: box-r;
 
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.box-r .card {
+    margin: 3px;
     background-color: #e4e3e8;
 }
 
@@ -99,4 +115,11 @@ html {
     background-color: #336601;
     color: white;
     grid-area: footer;
+}
+
+.head {
+    margin-top: 0;
+    padding: 5px;
+    background-color: #336601;
+    color: white;
 }
